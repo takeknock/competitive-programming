@@ -1,15 +1,10 @@
-
 #include <iostream>
 #include <string>
 
-
-class Solver {
-public:
-    void solve();
-};
+#include "A.h"
 
 
-void Solver::solve() {
+void A::solve() {
     // “ü—Í
     std::string s;
     std::cin >> s;
@@ -22,11 +17,5 @@ void Solver::solve() {
     }
 
     std::cout << ans << std::endl;
-    
-}
 
-int main() {
-    Solver solver = Solver();
-    solver.solve();
-    return 0;
 }
