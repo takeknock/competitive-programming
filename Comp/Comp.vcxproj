@@ -116,11 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="abc081\A.cpp" />
+    <ClCompile Include="abc081\B.cpp" />
     <ClCompile Include="abc086\A.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abc081\A.h" />
+    <ClInclude Include="abc081\B.h" />
     <ClInclude Include="abc086\A.h" />
     <ClInclude Include="abc120\A.h" />
     <ClInclude Include="abc120\B.h" />

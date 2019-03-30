@@ -2,14 +2,9 @@
 #include <iostream>
 #include <string>
 
+#include "B.h"
 
-class Solver {
-public:
-    void solve();
-};
-
-
-void Solver::solve() {
+void B::solve() {
     // “ü—Í
     int n;
 
@@ -27,11 +22,5 @@ void Solver::solve() {
         ans = ans > count ? count : ans;
     }
 
-    std::cout << ans << std::endl;    
-}
-
-int main() {
-    Solver solver = Solver();
-    solver.solve();
-    return 0;
+    std::cout << ans << std::endl;
 }
