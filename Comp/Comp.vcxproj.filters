@@ -27,6 +27,12 @@
     <ClCompile Include="abc081\B.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="abc087\B.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abc083\B.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abc120\A.h">
@@ -57,6 +63,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="abc081\B.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc087\B.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc083\B.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

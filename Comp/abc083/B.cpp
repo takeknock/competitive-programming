@@ -1,15 +1,7 @@
-
 #include <iostream>
-#include <string>
+#include "B.h"
 
-
-class Solver {
-public:
-    void solve();
-};
-
-
-void Solver::solve() {
+void B::solve() {
     // “ü—Í
     int n, a, b;
 
@@ -27,11 +19,5 @@ void Solver::solve() {
             ans += i;
         }
     }
-    std::cout << ans << std::endl;    
-}
-
-int main() {
-    Solver solver = Solver();
-    solver.solve();
-    return 0;
+    std::cout << ans << std::endl;
 }
