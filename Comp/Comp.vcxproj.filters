@@ -33,6 +33,24 @@
     <ClCompile Include="abc083\B.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="abc123\A.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abc123\B.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abc123\C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abc124\A.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abc124\B.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="abc124\C.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="abc120\A.h">
@@ -69,6 +87,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="abc083\B.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc123\A.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc123\B.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc123\C.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc124\A.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc124\B.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abc124\C.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

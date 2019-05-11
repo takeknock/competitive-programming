@@ -1,7 +1,7 @@
-
 #include <iostream>
 #include <string>
-
+#include <algorithm>
+#include <vector>
 
 class Solver {
 public:
@@ -10,24 +10,28 @@ public:
 
 
 void Solver::solve() {
-    // “ü—Í
-    int n, a, b;
+	std::string s;
+	int n, k;
+	std::cin >> n >> k >> s;
+	int dp[10009];
+	std::fill(dp, dp + 10009, -1);
+	int count = 0;
+	for (int i = 0; i < n; ++i) {
+		int num = std::stoi(s.substr(i, 1));
+		if (num == 0) {
+			dp[i] = count;
+			count++;
+		}
+		else {
+			count = 0;
+		}
+	}
 
-    std::cin >> n >> a >> b;
+	for (int i = 0; i < n; ++i) {
+		
+	}
 
-    int ans = 0;
-    for (std::size_t i = 1; i <= n; ++i) {
-        int thisIndex = i;
-        int count = 0;
-        while (thisIndex != 0) {
-            count += thisIndex % 10;
-            thisIndex /= 10;
-        }
-        if (a <= count && count <= b) {
-            ans += i;
-        }
-    }
-    std::cout << ans << std::endl;    
+	std::cout << dp[1000] << std::endl;
 }
 
 int main() {
