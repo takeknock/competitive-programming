@@ -13,7 +13,12 @@ class Program
 
     void Solve()
     {
+        Scanner cin = new Scanner();
+        int n = cin.NextInt();
+        int k = cin.NextInt();
 
+
+        Console.WriteLine(n - k + 1);
     }
 }
 
