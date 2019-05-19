@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="2019tenka1\C.cs" />
     <Compile Include="abc125\C.cs" />
+    <Compile Include="abc126\A.cs" />
+    <Compile Include="abc126\B.cs" />
+    <Compile Include="abc126\C.cs" />
     <Compile Include="agc033\A.cs" />
     <Compile Include="diverta\B.cs" />
     <Compile Include="diverta\C.cs" />

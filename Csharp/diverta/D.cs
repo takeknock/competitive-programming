@@ -12,19 +12,21 @@ namespace Csharp.diverta
         {
             Scanner cin = new Scanner();
             long n = cin.NextLong();
-
-            List<long> res = new List<long>();
-            //long sqrt = Math.Sqrt(n);
-            for (long i = 1; i <= n; i++)
+            List<long> divisors = new List<long>();
+            for (long i = 1; i <= n / 2; i++)
             {
-                if (n / i == n % i)
+                if (divisors.Contains(i))
                 {
-                    res.Add(i);
+                    break;
+                }
+                if (n % i == 0)
+                {
+                    divisors.Add(n / i);
                 }
             }
-
-            long total = res.Sum();
-            Console.WriteLine(total);
+            var res = divisors.Where(e => n / e == n % e);
+            long ans = res.Sum();
+            Console.WriteLine(ans);
         }
     }
 }

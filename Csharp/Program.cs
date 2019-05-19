@@ -14,25 +14,23 @@ class Program
     void Solve()
     {
         Scanner cin = new Scanner();
-        long n = cin.NextLong();
+        int n = cin.NextInt();
+        int k = cin.NextInt();
 
-        List<long> divisors = new List<long>();
-        for (long i = 1; i <= n / 2; i++)
+        double prob = 0.0;
+        for (int i = 1; i <= n; i++)
         {
-            if (divisors.Contains(i))
+            long tmp = i;
+            double thisProb = 1.0;
+            while(tmp < k)
             {
-                break;
+                tmp *= 2;
+                thisProb *= 0.5;
             }
-            if (n % i == 0)
-            {
-                divisors.Add(n / i);
-            }
+            prob += thisProb / n;
         }
-        var res = divisors.Where(e => n / e == n % e);
-        long ans = res.Sum();
-        Console.WriteLine(ans);
+        Console.WriteLine(prob);
     }
-
 }
 
 
