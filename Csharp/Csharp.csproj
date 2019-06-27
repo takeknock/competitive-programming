@@ -48,10 +48,14 @@
     <Compile Include="abc126\A.cs" />
     <Compile Include="abc126\B.cs" />
     <Compile Include="abc126\C.cs" />
+    <Compile Include="abc126\D.cs" />
+    <Compile Include="abc128\C.cs" />
+    <Compile Include="abc129\D.cs" />
     <Compile Include="agc033\A.cs" />
     <Compile Include="diverta\B.cs" />
     <Compile Include="diverta\C.cs" />
     <Compile Include="diverta\D.cs" />
+    <Compile Include="msol\D.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

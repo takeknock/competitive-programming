@@ -5,6 +5,24 @@ namespace CsharpLibrary
 {
     public class MMath
     {
+        /// <summary>
+        ///  O(log n)
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        static int LCM(int a, int b)
+        {
+            int gcd = GCD(a, b);
+            return a * b / gcd;
+        }
+
+        /// <summary>
+        ///  calculate gcd in O(log n).
+        /// </summary>
+        /// <param name="a">a must be equal or larger than b.</param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         static int GCD(int a, int b)
         {
             var c = 1;
@@ -17,6 +35,11 @@ namespace CsharpLibrary
             return a;
         }
 
+        /// <summary>
+        ///   create divisors (O(sqrt(n)))
+        /// </summary>
+        /// <param name="n">number you wank to know divisors</param>
+        /// <returns>divisors IEnumerable</returns>
         static IEnumerable<int> MakeDivisors(int n)
         {
             List<int> divisors = new List<int>();

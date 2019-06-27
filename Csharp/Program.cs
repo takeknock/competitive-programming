@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Numerics;
 
 class Program
 {
+    const int MOD = 1000000007;
     static void Main(string[] args)
     {
         new Program().Solve();
@@ -15,22 +19,75 @@ class Program
     {
         Scanner cin = new Scanner();
         int n = cin.NextInt();
-        int k = cin.NextInt();
+        int t = cin.NextInt();
+        //int[] x = new int[n];
+        //int[] y = new int[n];
 
-        double prob = 0.0;
-        for (int i = 1; i <= n; i++)
-        {
-            long tmp = i;
-            double thisProb = 1.0;
-            while(tmp < k)
-            {
-                tmp *= 2;
-                thisProb *= 0.5;
-            }
-            prob += thisProb / n;
-        }
-        Console.WriteLine(prob);
+        //for (int i = 0; i < n; i++)
+        //{
+        //    x[i] = cin.NextInt();
+        //    y[i] = cin.NextInt();
+        //}
+
+        Util.Swap(ref n, ref t);
+        Console.WriteLine("{0} {1}", n, t);
+        
     }
+
+}
+
+class Util
+{
+    public static void Swap(ref int a, ref int b)
+    {
+        a ^= b; // a = a ^ b
+        b ^= a; // b = b ^ (a ^ b) // this is a.
+        a ^= b; // a = (a ^ b) ^ (b ^ (a ^ b)) // this is b.
+    }
+}
+
+class UnionFind
+{
+    private List<int> parentVertexes = new List<int>();
+
+    UnionFind(int n)
+    {
+        parentVertexes = Enumerable.Repeat(-1, n).ToList();
+    }
+
+    int Root(int vi)
+    {
+        if(parentVertexes[vi] < 0)
+        {
+            return vi;
+        }
+
+        return Root(parentVertexes[vi]);
+
+    }
+
+    bool IsSame(int x, int y)
+    {
+        return Root(x) == Root(y);
+    }
+
+    bool Merge(int x, int y)
+    {
+        if (IsSame(x, y))
+        {
+            return false;
+        }
+        if (parentVertexes[x] > parentVertexes[y])
+        {
+            // merge technique
+            Util.Swap(ref x, ref y);
+        }
+
+        parentVertexes[x] += parentVertexes[y];
+        parentVertexes[y] = x;
+        return true;
+    }
+
 }
 
 
@@ -108,3 +165,4 @@ class Scanner
         return Array;
     }
 }
+
